@@ -694,7 +694,10 @@ h1, h2, h3, h4, h5,
 
 .intro-section {
   position: relative; 
-  background-image: linear-gradient(to top, #202D73,#05AFF2, #8C0F6B);
+  background-image: url('../images/instagram-style-background-gradient-css.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
   .intro-section, .intro-section .container .row {
     height: 100vh;
