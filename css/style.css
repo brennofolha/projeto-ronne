@@ -1,3 +1,6 @@
+
+
+
 /*------------------------------------------------------------
 |  Author: Free-Template.co                                   
 |  Author URL: https://free-template.co/                      
@@ -665,6 +668,7 @@ h1, h2, h3, h4, h5,
           -o-transition: .3s all ease;
           transition: .3s all ease; }
         .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover, .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active {
+          
           color: #352961;
           position: relative; }
           .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover:after, .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active:after {
@@ -689,16 +693,19 @@ h1, h2, h3, h4, h5,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8186d5', endColorstr='#494ca2', GradientType=1 ); }
 
 .intro-section {
-  position: relative; }
+  position: relative; 
+  background-image: linear-gradient(to top, #202D73,#05AFF2, #8C0F6B);
+}
   .intro-section, .intro-section .container .row {
     height: 100vh;
     min-height: 1200px; }
+    
   .intro-section:before {
     content: "";
     position: absolute;
     height: 100%;
     width: 70%;
-    background: #352961;
+    
     border-bottom-right-radius: 200px; }
     @media (max-width: 991.98px) {
       .intro-section:before {
@@ -750,10 +757,12 @@ h1, h2, h3, h4, h5,
 
 .section-title {
   font-size: 3rem;
-  color: #352961;
+  color: #202D73;
   margin-bottom: 1.8rem;
   font-weight: 900;
-  max-width: 450px; }
+  max-width: 450px; 
+  
+}
   @media (max-width: 991.98px) {
     .section-title {
       font-size: 2.5rem; } }
@@ -925,7 +934,7 @@ h1, h2, h3, h4, h5,
       border-radius: 50%;
       background-color: #ccc; }
     .nonloop-block-14 .owl-dots .owl-dot.active span {
-      background-color: #352961; }
+      background-color: #202D73; }
 
 .footer-section {
   padding: 7em 0; }
@@ -954,7 +963,7 @@ h1, h2, h3, h4, h5,
     font-weight: 900; }
   .process h3, .service h3 {
     font-size: 1.5rem;
-    color: #352961;
+    color: #202D73;
     font-weight: 700;
     margin-bottom: 1.5rem; }
 
@@ -1002,7 +1011,7 @@ h1, h2, h3, h4, h5,
     position: absolute;
     content: "";
     height: 7px;
-    background: #352961;
+    background: #202D73;
     top: 0;
     left: 0;
     width: 100%;
