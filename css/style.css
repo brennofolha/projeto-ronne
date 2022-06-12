@@ -312,9 +312,9 @@ h1, h2, h3, h4, h5,
   font-weight: 900;
   font-size: 1.3rem;
   font-family: "Oswald", sans-serif;
-  letter-spacing: .2rem; }
-  .site-logo a {
-    color: #fff; }
+  letter-spacing: .2rem; 
+  color: black;
+}
 
 .site-navbar {
   margin-bottom: 0px;
@@ -694,9 +694,7 @@ h1, h2, h3, h4, h5,
 
 .intro-section {
   position: relative; 
-  background-image: url('../images/instagram-style-background-gradient-css.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(to bottom, #8C0F6B,  #05AFF2, #023E73);
   
 }
   .intro-section, .intro-section .container .row {
@@ -760,7 +758,7 @@ h1, h2, h3, h4, h5,
 
 .section-title {
   font-size: 3rem;
-  color: #202D73;
+  color:  #352961;
   margin-bottom: 1.8rem;
   font-weight: 900;
   max-width: 450px; 
@@ -937,7 +935,7 @@ h1, h2, h3, h4, h5,
       border-radius: 50%;
       background-color: #ccc; }
     .nonloop-block-14 .owl-dots .owl-dot.active span {
-      background-color: #202D73; }
+      background-color: #05AFF2; }
 
 .footer-section {
   padding: 7em 0; }
@@ -966,7 +964,7 @@ h1, h2, h3, h4, h5,
     font-weight: 900; }
   .process h3, .service h3 {
     font-size: 1.5rem;
-    color: #202D73;
+    color: #352961;
     font-weight: 700;
     margin-bottom: 1.5rem; }
 
@@ -1014,7 +1012,7 @@ h1, h2, h3, h4, h5,
     position: absolute;
     content: "";
     height: 7px;
-    background: #202D73;
+    background: #05AFF2;
     top: 0;
     left: 0;
     width: 100%;
@@ -1200,7 +1198,7 @@ h1, h2, h3, h4, h5,
   height: 100%;
   position: fixed;
   z-index: 7100;
-  background: #0A0A2A;
+  background: white;
   top: 0;
   left: 0;
   right: 0;
