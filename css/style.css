@@ -340,7 +340,9 @@ h1, h2, h3, h4, h5,
       text-decoration: none !important;
       display: inline-block; }
     .site-navbar .site-navigation .site-menu > li {
-      display: inline-block; }
+      display: inline-block;
+      
+    }
       .site-navbar .site-navigation .site-menu > li > a {
         padding: 5px 20px;
         color: #fff;
@@ -733,7 +735,9 @@ h1, h2, h3, h4, h5,
 
 .cta a span {
   border-color: #352961;
-  padding: 10px 20px; }
+  padding: 10px 20px; 
+  text-align: top right ;
+}
 
 .cta a:hover span {
   background: #007bff;
@@ -1063,7 +1067,8 @@ h1, h2, h3, h4, h5,
     padding: 28px 30px;
     position: relative;
     background: #dc3545;
-    float: left; }
+
+  }
     .custom-owl-carousel .owl-custom-direction a:first-child {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px; }
@@ -1228,7 +1233,7 @@ h1, h2, h3, h4, h5,
       
 
     }
-    
+
 
     
 
