@@ -1236,15 +1236,7 @@ h1, h2, h3, h4, h5,
         box-sizing: border-box;
       }
 
-      button{
-        display: block;
-        margin: 20px auto;
-        background: crimson;
-        color: white;
-        border: 0;
-        cursor: pointer;
-        padding: 6px 10px;
-      }
+      
       .popup-wrapper{
         display: none;
         background: rgba(0, 0, 0, 0.5);
