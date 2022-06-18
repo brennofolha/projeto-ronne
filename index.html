@@ -539,17 +539,7 @@
     
       
         <div class="frame">
-          <script type="text/javascript">
-            function abrir() {
-              document.querySelector('.popup-wrapper').style.display = 'block';
-            }
-            function fechar() {
-              document.querySelector('.popup-wrapper').style.display = 'none';
-            }
-
-            </script>
-          <a href="javascript: abrir();" onmouseover="abrir()"><img src="images/Fundo transparente 1600x10.png" alt="!Clique Aqui!"></a>
-          
+          <button class ="button">Clique aqui</button>
           <iframe src="https://meufinanciamentosolar.com.br/link?token=07bac323-a4a2-46ab-b856-a9c50826cfdd
           ">
           
@@ -753,7 +743,7 @@
   
     
   </div> <!-- .site-wrap -->
-  
+  <script src="./app.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -786,19 +776,19 @@
   <div class="global">
     <div class="popup-wrapper">
       <div class="popup">
-        <a href="javascript: fechar();" class="popup-close">x</a>
+        <div class="popup-close">x</a>
           <div class="popup-content">
     
           <h2>Popup</h2>
     
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptate debitis unde fugiat, earum possimus consectetur reprehenderit obcaecati quas ratione velit eveniet, consequuntur saepe. Neque magni excepturi eos eius nostrum.</p>
     
-          <a class="popup-link" href="javascript: fechar();">Saiba mais</a>
+          <a class="popup-link" href="#">Saiba mais</a>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="./app.js"></script>
+  
   </body>
 </html>

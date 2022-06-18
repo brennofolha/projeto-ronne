@@ -1,4 +1,4 @@
-const button = document.querySelector('button')
+const button = document.querySelector('.button')
 const popup = document.querySelector('.popup-wrapper')
 
 button.addEventListener('click', () => {
@@ -15,3 +15,5 @@ popup.addEventListener('click', event => {
         popup.style.display = 'none'
     }
 })
+ 
+ 
