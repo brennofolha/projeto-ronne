@@ -1219,7 +1219,6 @@ h1, h2, h3, h4, h5,
     transform: translate(-50%, -50%); }
 
     div.frame{
-        
         background-color: #F1F3F8;
         min-width: 320px;
         max-width: 2560px;
@@ -1282,7 +1281,10 @@ h1, h2, h3, h4, h5,
           cursor: pointer;
 
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> parent of f2825a8 (teste  cell)
 
       
 
