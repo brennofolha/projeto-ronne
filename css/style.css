@@ -1235,8 +1235,8 @@ h1, h2, h3, h4, h5,
       width: 20rem;
     }
     .botao{
-      height: 3rem;
-      width: 20rem;
+      height: 100%;
+      width: 100%;
       --tw-bg-opacity: 1;
       background-color: rgba(220,20,104,var(--tw-bg-opacity));
       padding: 0.5rem 1.25rem;
@@ -1272,6 +1272,11 @@ h1, h2, h3, h4, h5,
       font-size: 100%;
       line-height: 1.15;
       margin: 0;
+    }
+    div.botao-pai{
+      width: 350px;
+      height: 50px;
+      margin: 0 auto;
     }
     
 
