@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="shortcut icon" href="../images/1675382014545.png" type="image/x-icon">
   <title>Calculadora de Energia</title>
   <style>
     input[type="number"]::-webkit-inner-spin-button,
@@ -83,8 +84,93 @@
     }
     .image-container {
       position: relative;
-      right: -850px;
-      bottom: 200px;
+      left: 12px;
+      bottom: 550px;
+    }
+    
+  </style><style>
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="number"],
+    input[type="text"] {
+      width: 92%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .currency {
+      text-align: right;
+    }
+    
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+    }
+    .image-container {
+      position: relative;
+      left: 12px;
+      bottom: 550px;
     }
     
   </style>
@@ -133,8 +219,10 @@
   </div>
   
   <script>
-    function formatarValor(valor) {
-      return valor.toFixed(2).replace('.', ',');
+   function formatarValor(valor) {
+      var partes = valor.toFixed(2).split(".");
+      partes[0] = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      return partes.join(",");
     }
     
     function calcular() {
@@ -173,9 +261,23 @@
       var errorMessage = document.getElementById("error-message");
       errorMessage.textContent = "";
     }
+    function enviarMensagemWhatsApp(mensagem) {
+      const accountSid = 'ACee3461a4f82e5edd45edc1abe4bc4d9f'; // Substitua pelo seu Account SID
+      const authToken = '8c166a19f927bfa41a1d0ffcdd4b6fb3'; // Substitua pelo seu Auth Token
+      const client = require('twilio')(accountSid, authToken);
+
+      client.messages
+        .create({
+          body: mensagem,
+          from: 'whatsapp:+6993817243', // Substitua pelo seu número do Twilio
+          to: 'whatsapp:+556993817243' // Substitua pelo número de telefone de destino
+        })
+        .then(message => console.log(message.sid))
+        .catch(error => console.log(error));
+    }
   </script>
   <div class="image-container">
-    <img src="../images/BackgroundEraser_20230520_142736911.png" alt="logo">
+    <img src="../images/1675382014545.png" alt="logo">
   </div>
 </body>
 </html>
