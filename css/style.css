@@ -1329,7 +1329,31 @@ h1, h2, h3, h4, h5,
       #link-red {
        color: #FFFFFF;
       }
-      
+      .botao-calculo {
+        position: absolute; 
+        top: 190px; 
+        left: 900px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+    
+      .botao-calculo:hover {
+        background-color: #45a049;
+      }
+      .emoji {
+        font-size: 25px; /* Defina o tamanho desejado */
+        color: rgb(67, 67, 60);
+      }
       
 
 
