@@ -1274,8 +1274,8 @@ h1, h2, h3, h4, h5,
       margin: 0;
     }
     div.botao-pai{
-      width: 350px;
-      height: 50px;
+      width: 80%;
+      height: auto;
       margin: 0 auto;
     }
     div#global{
@@ -1329,15 +1329,20 @@ h1, h2, h3, h4, h5,
       #link-red {
        color: #FFFFFF;
       }
+      .container-botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        
+      }
+      
       .botao-calculo {
-        position: absolute; 
-        top: 190px; 
-        left: 900px;
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
         text-align: center;
+        padding: 10px 60px;
+        font-size: 25px;
+        font-weight: bold;
         text-decoration: none;
         background-color: #4caf50;
         color: #fff;
@@ -1345,15 +1350,39 @@ h1, h2, h3, h4, h5,
         border-radius: 4px;
         transition: background-color 0.3s ease;
         cursor: pointer;
+        width: 80%;
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
       }
-    
+      
       .botao-calculo:hover {
         background-color: #45a049;
       }
+      
       .emoji {
-        font-size: 25px; /* Defina o tamanho desejado */
-        color: rgb(67, 67, 60);
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        vertical-align: middle;
       }
+      
+      .container-botao a {
+        display: flex;
+        align-items: center;
+      }
+      
+      
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
       
 
 
