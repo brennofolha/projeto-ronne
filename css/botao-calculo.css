@@ -1,0 +1,42 @@
+.container-botao {
+    display: flex; /* Aplica o modelo de layout flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    margin-top: 50px; /* Define uma margem superior de 50 pixels */
+    margin-bottom: 50px; /* Define uma margem inferior de 50 pixels */
+  }
+  
+  .botao-calculo {
+    text-align: center; /* Centraliza o texto dentro do botão */
+    padding: 10px 60px; /* Define o preenchimento interno do botão */
+    font-size: 25px; /* Define o tamanho da fonte do texto do botão */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    text-decoration: none; /* Remove a decoração de sublinhado do texto */
+    background-color: #4caf50; /* Define a cor de fundo do botão */
+    color: #fff; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Define o raio do arredondamento das bordas */
+    transition: background-color 0.3s ease; /* Aplica uma transição suave na cor de fundo */
+    cursor: pointer; /* Altera o cursor do mouse para um ponteiro */
+    width: 80%; /* Define a largura do botão como 80% do elemento pai */
+    display: flex; /* Aplica o modelo de layout flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+  }
+  
+  .botao-calculo:hover {
+    background-color: #45a049; /* Define a cor de fundo do botão quando o mouse estiver sobre ele */
+  }
+  
+  .emoji {
+    width: 30px; /* Define a largura do emoji como 30 pixels */
+    height: 30px; /* Define a altura do emoji como 30 pixels */
+    margin-left: 5px; /* Define uma margem à esquerda de 5 pixels */
+    vertical-align: middle; /* Alinha verticalmente o emoji com o texto do botão */
+  }
+  
+  .container-botao a {
+    display: flex; /* Aplica o modelo de layout flexbox */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+  }
+  
