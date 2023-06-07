@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <link rel="shortcut icon" href="../images/1675382014545.png" type="image/x-icon">
   <title>Calculadora de Energia</title>
   <style>
+    
     input[type="number"]::-webkit-inner-spin-button,
     input[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -15,9 +17,11 @@
       margin: 0;
       padding: 20px;
       background-image: url(../images/1675382014545.png);
-      
       background-size: inherit;
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     
     .header {
@@ -28,11 +32,11 @@
     
     .container {
       max-width: 400px;
-      margin: 0 auto;
       background-color: #fff;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     }
     
     .form-group {
@@ -120,6 +124,7 @@
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
     }
     
     .form-group {
@@ -200,7 +205,7 @@
       <label for="tarifa">Tarifa de Energia:</label>
       <div class="input-wrapper">
         <span class="currency">R$</span>
-        <input type="text" id="tarifa" placeholder="Informe o valor da tarifa de energia" oninput="validarTarifa(this)">
+        <input type="text" id="tarifa" placeholder="R$ com centavos separados por vírgula ou ponto." oninput="validarTarifa(this)">
       </div>
     </div>
     
@@ -208,15 +213,14 @@
       <label for="kwh">Valor do kWh:</label>
       <div class="input-wrapper">
         <span class="currency">R$</span>
-        <input type="number" id="kwh" placeholder="quilowatt-hora em sua região (Em Rondônia é de 0,78)">
+        <input type="number" id="kwh" placeholder="Quilowatt-hora na sua região (Rondônia: R$0,78).">
       </div>
     </div>
     
     <div class="form-group">
       <label for="hsp">HSP:</label>
       <div class="input-wrapper">
-        <span class="currency">R$</span>
-        <input type="number" id="hsp" placeholder="Horas de Sol Pico em sua região (Em Rondônia é de 4 horas)" step="0.01" min="0">
+        <input type="number" id="hsp" placeholder="Horas de Sol Pico na sua região (Rondônia: 4 horas)." step="0.01" min="0">
       </div>
     </div>
     
@@ -228,20 +232,7 @@
   
   
    <script>
-  function enviarMensagemWhatsApp(mensagem) {
-    const accountSid = 'ACee3461a4f82e5edd45edc1abe4bc4d9f'; // Substitua pelo seu Account SID
-    const authToken = '9bd57f94b31cee131a3ea780afa14b4a'; // Substitua pelo seu Auth Token
-    const client = require('twilio')(accountSid, authToken);
-
-    client.messages
-      .create({
-        body: mensagem,
-        from: 'whatsapp:+13253125691', // Substitua pelo seu número do Twilio
-        to: 'whatsapp:+556993817243' // Substitua pelo número de telefone de destino
-      })
-      .then(message => console.log(message.sid))
-      .catch(error => console.log(error));
-  }
+  
   
   function formatarValor(valor) {
     var partes = valor.toFixed(2).split(".");
@@ -257,7 +248,7 @@
 
     if (nome === "" || isNaN(tarifa) || isNaN(kwh) || isNaN(hsp)) {
       var errorMessage = document.getElementById("error-message");
-      errorMessage.textContent = "Por favor, preencha todos os campos obrigatórios com valores numéricos.";
+      errorMessage.textContent = "Por favor, preencha todos os campos obrigatorios com valores numericos.";
       return;
     }
 
@@ -275,12 +266,12 @@
 
     if (resultado1.toFixed(2) === "0.00") {
       var errorMessage = document.getElementById("error-message");
-      errorMessage.textContent = "O resultado do cálculo é zero.";
+      errorMessage.textContent = "O resultado do calculo e zero.";
       return;
     }
 
     var resultadoElement = document.getElementById("resultado");
-    resultadoElement.textContent = `Olá, ${nome}! O valor varia entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)}`;
+    resultadoElement.textContent = `Ola, ${nome}! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} ja instalado (produto + instalacao + projeto + homologacao + mao de obra)`;
 
     var errorMessage = document.getElementById("error-message");
     errorMessage.textContent = "";
