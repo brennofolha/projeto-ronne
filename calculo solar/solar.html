@@ -5,7 +5,6 @@
   <link rel="shortcut icon" href="../images/1675382014545.png" type="image/x-icon">
   <title>Calculadora de Energia</title>
   <style>
-    
     input[type="number"]::-webkit-inner-spin-button,
     input[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -16,139 +15,47 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background-image: url(../images/1675382014545.png);
-      background-size: inherit;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-      
-    }
-    
-    .container {
-      max-width: 400px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    }
-    
-    .form-group {
-      margin-bottom: 15px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    
-    input[type="number"],
-    input[type="text"] {
-      width: 92%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    
-    .currency {
-      text-align: right;
-    }
-    
-    button {
-      display: block;
-      margin: 0 auto;
-      padding: 10px 20px;
-      background-color: #4caf50;
+      background-color: #3c514c;
       color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
     }
-    
-    button:hover {
-      background-color: #45a049;
-    }
-    
-    #resultado {
-      margin-top: 20px;
-      font-weight: bold;
-      background-color: #f5f5f5;
-      padding: 10px;
-      border-radius: 4px;
-    }
-    
-    .error-message {
-      color: red;
-      font-size: 14px;
-      text-align: center;
-    }
-    .image-container {
+
+    .header {
       position: relative;
-      left: 12px;
-      bottom: 550px;
-    }
-    
-  </style><style>
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f5f5f7;
-      color: #fff;
-    }
-    
-    .header {
+      top: -30px;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       padding: 2.5px;
     }
-    
+
     .container {
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
-      background-color: #3c514c;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      
     }
-    
+
     .form-group {
       margin-bottom: 15px;
     }
-    
+
     label {
+      text-align: left;
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
     }
-    
+
     input[type="number"],
     input[type="text"] {
-      width: 92%;
+      width: 100%;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      margin: 0 auto;
     }
-    
+
     .currency {
       text-align: right;
     }
-    
+
     button {
       display: block;
       margin: 0 auto;
@@ -160,11 +67,11 @@
       cursor: pointer;
       font-size: 16px;
     }
-    
+
     button:hover {
       background-color: #45a049;
     }
-    
+
     #resultado {
       margin-top: 20px;
       font-weight: bold;
@@ -172,43 +79,76 @@
       padding: 10px;
       border-radius: 4px;
       color: #000000;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      top: 20px;
     }
-    
+
     .error-message {
       color: red;
       font-size: 14px;
       text-align: center;
+      
     }
-    .image-container {
+
+    .button-site-principal {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
       position: relative;
-      left: 12px;
-      bottom: 550px;
+      left: -32%;
+      top: -450px;
+      width: 200px;
+      height: 22px;
+      text-align: center;
+      
     }
+
+    .button-site-principal:hover {
+      background-color: #45a049;
+    }
+    .imagem-responsiva {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      z-index: 1;
+}
     
   </style>
 </head>
 <body>
-  
+  <div class="wrapper">
+    <img src="../images/1675382014545.png" alt="logo-rtc" class="imagem-responsiva">
+  </div>
   
   <div class="container">
     <div class="header">
       <h1>Calculadora de Energia</h1>
-      
-      
     </div>
     <div class="form-group">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" placeholder="Seu nome completo">
     </div>
-  
+
     <div class="form-group">
       <label for="tarifa">Tarifa de Energia:</label>
       <div class="input-wrapper">
         <span class="currency">R$</span>
-        <input type="text" id="tarifa" placeholder="R$ com centavos separados por vírgula ou ponto." oninput="validarTarifa(this)">
+        <input type="number" id="tarifa" placeholder="R$ com centavos separados por vírgula ou ponto." oninput="validarTarifa(this)">
       </div>
     </div>
-    
+
     <div class="form-group">
       <label for="kwh">Valor do kWh:</label>
       <div class="input-wrapper">
@@ -216,71 +156,91 @@
         <input type="number" id="kwh" placeholder="Quilowatt-hora na sua região (Rondônia: R$0,78).">
       </div>
     </div>
-    
+
     <div class="form-group">
       <label for="hsp">HSP:</label>
       <div class="input-wrapper">
         <input type="number" id="hsp" placeholder="Horas de Sol Pico na sua região (Rondônia: 4 horas)." step="0.01" min="0">
       </div>
     </div>
-    
+
     <button onclick="calcular()">Calcular</button>
-    
+
     <div id="resultado"></div>
-    <div id="error-message" class="error-message"></div>
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="../index.html" class="button-site-principal">Voltar para o site principal</a>
   </div>
-  
-  
-   <script>
-  
-  
+  <script>
   function formatarValor(valor) {
-    var partes = valor.toFixed(2).split(".");
-    partes[0] = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    return partes.join(",");
+  var partes = valor.toFixed(2).split(".");
+  partes[0] = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return partes.join(",");
+}
+
+function calcular() {
+  var nome = document.getElementById("nome").value;
+  var tarifa = parseFloat(document.getElementById("tarifa").value.replace(".", "").replace(",", "."));
+  var kwh = parseFloat(document.getElementById("kwh").value);
+  var hsp = parseFloat(document.getElementById("hsp").value);
+
+  if (nome === "") {
+    alert("Por favor, digite um nome.");
+    return;
   }
 
-  function calcular() {
-    var nome = document.getElementById("nome").value;
-    var tarifa = parseFloat(document.getElementById("tarifa").value.replace(".", "").replace(",", "."));
-    var kwh = parseFloat(document.getElementById("kwh").value);
-    var hsp = parseFloat(document.getElementById("hsp").value);
-
-    if (nome === "" || isNaN(tarifa) || isNaN(kwh) || isNaN(hsp)) {
-      var errorMessage = document.getElementById("error-message");
-      errorMessage.textContent = "Por favor, preencha todos os campos obrigatorios com valores numericos.";
-      return;
-    }
-
-    if (tarifa === 0 || kwh === 0 || hsp === 0) {
-      var errorMessage = document.getElementById("error-message");
-      errorMessage.textContent = "Os valores dos campos não podem ser zero.";
-      return;
-    }
-
-    var hspajustado = hsp - (hsp * 0.10);
-
-    var calculo1 = (tarifa / kwh / 30 / hspajustado * 2500);
-    var resultado1 = calculo1 + (calculo1 * 0.30);
-    var resultado2 = resultado1 + (resultado1 * 0.10);
-
-    if (resultado1.toFixed(2) === "0.00") {
-      var errorMessage = document.getElementById("error-message");
-      errorMessage.textContent = "O resultado do calculo e zero.";
-      return;
-    }
-
-    var resultadoElement = document.getElementById("resultado");
-    resultadoElement.textContent = `Ola, ${nome}! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} ja instalado (produto + instalacao + projeto + homologacao + mao de obra)`;
-
-    var errorMessage = document.getElementById("error-message");
-    errorMessage.textContent = "";
-
-    enviarMensagemWhatsApp(resultadoElement.textContent); // Envie a resposta para o WhatsApp
+  if (isNaN(tarifa)) {
+    alert("Por favor, preencha o campo 'Tarifa de Energia'.");
+    return;
   }
-</script>
+
+  if ( isNaN(kwh)) {
+    alert("Por favor, preencha o campo 'Valor do kWh'.");
+    return;
+  }
+
+  if (isNaN(hsp)) {
+    alert("Por favor, preencha o campo 'HSP'.");
+    return;
+  }
+  if (tarifa === 0) {
+    alert("O campo 'Tarifa de Energia' não pode ser preenchido com 0.");
+    return;
+  }
+
+  if (kwh === 0 ) {
+    alert("O campo 'Valor do kwh' não pode ser preenchido com 0.");
+    return;
+  }
+
+  if (hsp === 0) {
+    alert("O campo 'HSP' não pode ser preenchido com 0.");
+    return;
+  }
+
+  var hspajustado = hsp - (hsp * 0.10);
+
+  var calculo1 = (tarifa / kwh / 30 / hspajustado * 2500);
+  var resultado1 = calculo1 + (calculo1 * 0.30);
+  var resultado2 = resultado1 + (resultado1 * 0.10);
+
+  var resultadoElement = document.getElementById("resultado");
+  resultadoElement.textContent = `Olá, ${nome}! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
+}
+
 
   </script>
-  
+
 </body>
 </html>
