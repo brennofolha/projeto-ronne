@@ -25,7 +25,7 @@
 
     .header {
       position: relative;
-      top: -30px;
+      top: -55px;
       text-align: center;
       margin-bottom: 25px;
       padding: 2.5px;
@@ -128,7 +128,28 @@
       display: block;
       z-index: 1;
 }
-    
+    @media screen and (max-width: 209px) {
+      .button-site-principal {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      position: relative;
+      left: -15%;
+      top: 155px;
+      width: 200px;
+      height: 22px;
+      text-align: center;
+      
+    }
+    }
   </style>
 </head>
 <body>
@@ -147,10 +168,10 @@
     </div>
 
     <div class="form-group">
-      <label for="tarifa">Tarifa de Energia:</label>
+      <label for="tarifa">Conta de Energia:</label>
       <div class="input-wrapper">
         <span class="currency">R$</span>
-        <input type="number" id="tarifa" placeholder="R$ com centavos separados por vírgula ou ponto." oninput="validarTarifa(this)">
+        <input type="number" id="tarifa" placeholder="Digite a sua conta de energia" oninput="validarTarifa(this)">
       </div>
     </div>
 
@@ -158,14 +179,14 @@
       <label for="kwh">Valor do kWh:</label>
       <div class="input-wrapper">
         <span class="currency">R$</span>
-        <input type="number" id="kwh" placeholder="Quilowatt-hora na sua região (Rondônia: R$0,78).">
+        <input type="number" id="kwh" placeholder="(Rondônia: R$0,78).">
       </div>
     </div>
 
     <div class="form-group">
       <label for="hsp">HSP:</label>
       <div class="input-wrapper">
-        <input type="number" id="hsp" placeholder="Horas de Sol Pico na sua região (Rondônia: 4 horas)." step="0.01" min="0">
+        <input type="number" id="hsp" placeholder="(Rondônia: 4 horas)." step="0.01" min="0">
       </div>
     </div>
 
@@ -196,7 +217,7 @@
 
 function calcular() {
   var nome = document.getElementById("nome").value;
-  var tarifa = parseFloat(document.getElementById("tarifa").value.replace(".", "").replace(",", "."));
+  var tarifa = parseFloat(document.getElementById("tarifa").value.replace(",", "."));
   var kwh = parseFloat(document.getElementById("kwh").value);
   var hsp = parseFloat(document.getElementById("hsp").value);
 
