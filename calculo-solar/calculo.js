@@ -53,14 +53,26 @@ document.addEventListener("DOMContentLoaded", function() {
     var resultado2 = (resultado1 * 1.10);
 
     var resultadoElement = document.getElementById("resultado");
-    var resultado = `Olá, ${nome}! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
-    resultadoElement.textContent = resultado;
+  var resultado = `Olá, ${nome}! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
+  resultadoElement.textContent = resultado;
 
-    return resultado;
+  return resultado;
   }
-
+  
   function enviarWhatsApp() {
-    var resultado = calcular();
+    
+    var tarifa = parseFloat(document.getElementById("tarifa").value.replace(",", "."));
+    var kwh = parseFloat(document.getElementById("kwh").value);
+    var hsp = parseFloat(document.getElementById("hsp").value);
+
+    var calculo1 = (tarifa / kwh / 30 / hsp* 2500);
+    var resultado1 = (calculo1 * 1.30);
+    var resultado2 = (resultado1 * 1.10);
+
+
+  var resultadopre = `Olá, Ronne! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
+ 
+    var resultado = resultadopre;
     var mensagem = encodeURIComponent(resultado);
     var link = "https://api.whatsapp.com/send?phone=556992474003&text=" + mensagem;
     window.open(link, "_blank");
@@ -68,9 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.getElementById("zap").addEventListener("click", function () {
     enviarWhatsApp();
-  });
-
-  document.getElementById("calcular").addEventListener("click", function () {
     calcular();
   });
+
+  
 });
