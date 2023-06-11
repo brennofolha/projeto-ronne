@@ -58,7 +58,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
   return resultado;
   }
+  function enviarDados(email, resultado) {
+    const url = '/enviar-email'; // Rota no servidor para enviar o email
   
+    // Fazer uma solicitação POST para enviar os dados do formulário para o servidor
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, resultado }),
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Dados enviados com sucesso');
+        } else {
+          console.error('Erro ao enviar dados:', response.statusText);
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao enviar dados:', error);
+      });
+  }
   function enviarWhatsApp() {
     
     var tarifa = parseFloat(document.getElementById("tarifa").value.replace(",", "."));
