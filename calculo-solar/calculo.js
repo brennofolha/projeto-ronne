@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function enviarWhatsApp() {
     var resultado = calcular();
     var mensagem = encodeURIComponent(resultado);
-    var link = "https://api.whatsapp.com/send?texthttps://api.whatsapp.com/send?phone=556992474003&text=" + mensagem;
+    var link = "https://api.whatsapp.com/send?phone=556992474003&text=" + mensagem;
     window.open(link, "_blank");
   }
 
