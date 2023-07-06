@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
   function calcular() {
     var nome = document.getElementById("nome").value;
     var tarifa = parseFloat(document.getElementById("tarifa").value.replace(",", "."));
-    var kwh = parseFloat(document.getElementById("kwh").value);
-    var hsp = parseFloat(document.getElementById("hsp").value);
+    var kwh = 0.84;
+    var hsp = 4.4;
 
     if (nome === "") {
       alert("Por favor, digite um nome.");
@@ -21,36 +21,21 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    if (isNaN(kwh)) {
-      alert("Por favor, preencha o campo 'Valor do kWh'.");
-      return;
-    }
+    
 
-    if (isNaN(hsp)) {
-      alert("Por favor, preencha o campo 'HSP'.");
-      return;
-    }
+    
 
     if (tarifa === 0) {
       alert("O campo 'Tarifa de Energia' não pode ser preenchido com 0.");
       return;
     }
 
-    if (kwh === 0) {
-      alert("O campo 'Valor do kwh' não pode ser preenchido com 0.");
-      return;
-    }
+    
+    var hspajustado = hsp - (hsp * 0.10);
 
-    if (hsp === 0) {
-      alert("O campo 'HSP' não pode ser preenchido com 0.");
-      return;
-    }
-
-    var hspajustado = hsp;
-
-    var calculo1 = (tarifa / kwh / 30 / hspajustado * 2500);
-    var resultado1 = (calculo1 * 1.30);
-    var resultado2 = (resultado1 * 1.10);
+    var calculo1 = (tarifa / kwh / 30 / hspajustado * 3000);
+    var resultado2 = (calculo1 * 1.30);
+    var resultado1 = resultado2 - (resultado2 * 0.10);
 
     var resultadoElement = document.getElementById("resultado");
   var resultado = `Olá, ${nome}! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
@@ -60,17 +45,20 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   function enviarWhatsApp() {
-    
+    var nome = document.getElementById("nome").value;
     var tarifa = parseFloat(document.getElementById("tarifa").value.replace(",", "."));
-    var kwh = parseFloat(document.getElementById("kwh").value);
-    var hsp = parseFloat(document.getElementById("hsp").value);
+    var kwh = 0.84;
+    var hsp = 4.4;
+  
+    var hspajustado = hsp - (hsp * 0.10);
 
-    var calculo1 = (tarifa / kwh / 30 / hsp* 3000);
-    var resultado1 = (calculo1 * 1.20);
-    var resultado2 = (resultado1 * 1.08);
+    var calculo1 = (tarifa / kwh / 30 / hspajustado * 3000);
+    var resultado2 = (calculo1 * 1.30);
+    var resultado1 = resultado2 - (resultado2 * 0.10);
 
 
-  var resultadopre = `Olá, Ronne! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
+  var resultadopre = `Olá eu me chamo ${nome}, eu utilizei a sua calculadora solar e o valor do meu projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra) 
+  podemos conversar melhor?`;
  
     var resultado = resultadopre;
     var mensagem = encodeURIComponent(resultado);
