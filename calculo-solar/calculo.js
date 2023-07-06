@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var kwh = parseFloat(document.getElementById("kwh").value);
     var hsp = parseFloat(document.getElementById("hsp").value);
 
-    var calculo1 = (tarifa / kwh / 30 / hsp* 2500);
-    var resultado1 = (calculo1 * 1.30);
-    var resultado2 = (resultado1 * 1.10);
+    var calculo1 = (tarifa / kwh / 30 / hsp* 3000);
+    var resultado1 = (calculo1 * 1.20);
+    var resultado2 = (resultado1 * 1.08);
 
 
   var resultadopre = `Olá, Ronne! O valor do projeto vai ficar entre: R$${formatarValor(resultado1)} e R$${formatarValor(resultado2)} já instalado (produto + instalação + projeto + homologação + mão de obra)`;
