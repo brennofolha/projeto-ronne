@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       alert("Por favor, preencha o campo 'Tarifa de Energia'.");
       return;
     }
-
+    
     
 
     
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     enviarWhatsApp();
     calcular();
   });
-
+  
   
 });
 
