@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.open(link, "_blank");
   }
 
-  document.getElementById("zap").addEventListener("click", function () {
+  document.getElementById("zap").addEventListener("click","touchstart", function () {
     enviarWhatsApp();
     calcular();
   });
